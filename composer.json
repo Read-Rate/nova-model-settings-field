@@ -1,0 +1,54 @@
+{
+    "name": "read-rate/nova-model-settings-field",
+    "description": "A model-settings field for Laravel Nova",
+    "keywords": [
+        "readanrate",
+        "nova-model-settings-field"
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../laravel-nova"
+        }
+    ],
+    "homepage": "https://github.com/Read-Rate/nova-model-settings-field",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Donatien Schmitz",
+            "email": "donatien@schmitz.cc",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=7.1.0",
+        "laravel/nova": "*",
+        "glorand/laravel-model-settings": "^3.6"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.6",
+        "phpunit/phpunit": "7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Readandrate\\ModelSettingsField\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Readandrate\\ModelSettingsField\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Readandrate\\ModelSettingsField\\ModelSettingsFieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

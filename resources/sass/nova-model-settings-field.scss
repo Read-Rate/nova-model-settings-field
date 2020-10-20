@@ -1,0 +1,7 @@
+// Nova Tool CSS
+.setting-field{
+    margin: auto;
+}
+.value-field::before{
+    content: ": ";
+}

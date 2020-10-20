@@ -1,0 +1,6 @@
+.setting-field{
+    margin: auto;
+}
+.value-field::before{
+    content: ": ";
+}
