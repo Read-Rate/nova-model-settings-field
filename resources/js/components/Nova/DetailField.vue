@@ -1,9 +1,14 @@
 
 <template>
     <panel-item :field="field">
-        <p slot="value" v-for="(val,key) in field.value" >
-            {{key}} : {{val}}
-        </p>
+        <div slot="value" v-for="(val,key) in field.value" >
+            <span class="flex-1 no-underline font-bold dim text-primary setting-field">
+                {{key}}
+            </span>
+            <span class="flex-1 no-underline font-bold dim text-primary value-field">
+                {{val}}
+            </span>
+        </div>
     </panel-item>
 </template>
 

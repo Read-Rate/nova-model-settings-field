@@ -12,7 +12,7 @@ class ModelSettingsFieldControllerTest extends TestCase
     public function it_can_can_return_a_response()
     {
         $this
-            ->get('nova-vendor/:vendor/nova-model-settings-field/endpoint')
+            ->get('nova-vendor/read-rate/nova-model-settings-field/endpoint')
             ->assertSuccessful();
     }
 }

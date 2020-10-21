@@ -9,4 +9,4 @@ phpunit.xml
 mix-manifest.json
 .DS_Store
 yarn.lock
-
+.editorconfig
