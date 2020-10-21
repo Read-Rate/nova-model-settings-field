@@ -1,7 +1,7 @@
 <template>
     <default-field :field="field">
         <template slot="field">
-            <ul ref="novaitemslist"  class="nova-items-field-input-items list-reset border border-40 py-2">
+            <ul ref="novaitemslist" v-show="Object.keys(items).length !== 0" class="nova-items-field-input-items list-reset border border-40 py-2">
                 <li
                     v-for="(item, index) in items"
                     :key="field.attribute + '.' + index"
@@ -69,7 +69,7 @@ export default {
     data: function() {
         return {
             value: '',
-            items: [],
+            items: Object,
             newItem: '',
             newSetting: '',
             newValue: '',
@@ -78,11 +78,17 @@ export default {
     },
     methods: {
         setInitialValue() {
-            this.value = this.field.value || [];
-            this.items = this.field.value || [];
+            if (typeof this.field.value === 'object' && Object.keys(this.field.value).length !== 0){
+                this.value = this.field.value
+                this.items = this.field.value
+
+            }else{
+               this.value = {}
+               this.items = {}
+            }
         },
         fill(formData) {
-            formData.append(this.field.attribute, this.value || []);
+            formData.append(this.field.attribute, this.value || Object)
         },
         addItem() {
             const setting = this.newSetting.trim();
